@@ -1,351 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
      <loc>https://theskinnycoder/theskinnycoder.github.io/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/bs/envsetup/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <loc>https://theskinnycoder/theskinnycoder.github.io/devenv/vscode-basics/</loc>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/bs/editors/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <loc>https://theskinnycoder/theskinnycoder.github.io/devess/bash1/</loc>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/bs/bash1/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <loc>https://theskinnycoder/theskinnycoder.github.io/devess/markdown/</loc>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/bs/bash2/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/bs/git/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/bs/gooddev/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/py/overview/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/py/oops/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/py/envmanagers/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/py/contman/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/py/fnctns/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/py/op/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/py/ip/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/py/listcomp/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/py/packages/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/py/async/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/py/extras/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <loc>https://theskinnycoder/theskinnycoder.github.io/java/math/</loc>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://theskinnycoder/theskinnycoder.github.io/js/overview/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://theskinnycoder/theskinnycoder.github.io/js/keywords/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://theskinnycoder/theskinnycoder.github.io/js/fnctns/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://theskinnycoder/theskinnycoder.github.io/js/arrow/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://theskinnycoder/theskinnycoder.github.io/js/spread/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://theskinnycoder/theskinnycoder.github.io/js/templates/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://theskinnycoder/theskinnycoder.github.io/js/obj/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://theskinnycoder/theskinnycoder.github.io/js/destructure/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://theskinnycoder/theskinnycoder.github.io/js/oops/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://theskinnycoder/theskinnycoder.github.io/js/modules/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://theskinnycoder/theskinnycoder.github.io/js/async/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
      <loc>https://theskinnycoder/theskinnycoder.github.io/js/extras/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/cpp/overview/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/cpp/gcc/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/cpp/overload/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/cpp/oops/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/cpp/buzzwords/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/cpp/lists/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/cpp/memory/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/cpp/smart/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/cpp/templ/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/cpp/stl/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/cpp/make/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/cpp/gdb/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/cpp/valgrind/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/java/overview/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/java/oops/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/java/collections/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/java/threads/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/array/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/string/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/sll/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/dll/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/csll/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/cdll/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/ll/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/stackarr/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/stackll/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/stack/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/stackappl/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/queuearr/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/queuell/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/queue/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/queueappl/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/cqueuearr/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/cqueuell/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/cqueue/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/dequearr/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/dequell/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/deque/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/linear/hash/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/bt/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/bst/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/avl/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/rbt/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/st/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/bbpt/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/minheap/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/maxheap/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/left1/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/left2/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/binheap/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/fibheap/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/pairheap/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/adjmatr/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/adjlist/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/edgelist/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/disjsets/</loc>
-     <lastmod>2020-04-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url><url>
-     <loc>https://theskinnycoder/theskinnycoder.github.io/ds/nonlinear/rq/</loc>
-     <lastmod>2020-04-12</lastmod>
+     <lastmod>2020-04-28</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

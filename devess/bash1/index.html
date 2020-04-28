@@ -1,0 +1,1554 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Learn how to code, beautiful">
+      
+      
+        <link rel="canonical" href="https://theskinnycoder/theskinnycoder.github.io/devess/bash1/">
+      
+      
+        <meta name="author" content="Rahul SriRam">
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-5.1.0">
+    
+    
+      
+        <title>Some basic bash - The Skinny Coder</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.89dc9fe3.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecd4686e.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#e91e63">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700%7CMonaco&display=fallback">
+        <style>body,input{font-family:"Ubuntu",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Monaco",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="pink" data-md-color-accent="black">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bash" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://theskinnycoder/theskinnycoder.github.io" title="The Skinny Coder" class="md-header-nav__button md-logo" aria-label="The Skinny Coder">
+      
+  <img src="../../logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            The Skinny Coder
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Some basic bash
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/theskinnycoder/theskinnycoder.github.io.git/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    theskinnycoder.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Home
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../devenv/vscode-basics/" class="md-tabs__link">
+          Setup a Dev Environment
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          Development Essentials
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../java/math/" class="md-tabs__link">
+          The Java Jedi
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../js/overview/" class="md-tabs__link">
+          Modern JS
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://theskinnycoder/theskinnycoder.github.io" title="The Skinny Coder" class="md-nav__button md-logo" aria-label="The Skinny Coder">
+      
+  <img src="../../logo.svg" alt="logo">
+
+    </a>
+    The Skinny Coder
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/theskinnycoder/theskinnycoder.github.io.git/" title="Go to repository" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    theskinnycoder.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Home" class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      Setup a Dev Environment
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Setup a Dev Environment" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Setup a Dev Environment
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../devenv/vscode-basics/" title="Setup VSCode - The Basics" class="md-nav__link">
+      Setup VSCode - The Basics
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Development Essentials
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Development Essentials" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Development Essentials
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Some basic bash
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Some basic bash" class="md-nav__link md-nav__link--active">
+      Some basic bash
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-prerequisites" class="md-nav__link">
+    1. PreRequisites
+  </a>
+  
+    <nav class="md-nav" aria-label="1. PreRequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-what-is-bash" class="md-nav__link">
+    a. What is BASh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-current-and-parent-directories" class="md-nav__link">
+    b. Current and Parent Directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-dotfiles-and-hidden-files" class="md-nav__link">
+    c. Dotfiles and Hidden files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-root-and-home-directories" class="md-nav__link">
+    d. Root and Home directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-absolute-and-relative-paths" class="md-nav__link">
+    e. Absolute and Relative Paths
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-package-managers" class="md-nav__link">
+    f. Package Managers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g-clear-help-and-close-commands" class="md-nav__link">
+    g. Clear, Help and Close commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-navigating-the-file-system" class="md-nav__link">
+    2. Navigating the File System
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Navigating the File System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-the-pwd-command" class="md-nav__link">
+    a. The pwd command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-the-ls-command" class="md-nav__link">
+    b. The ls command
+  </a>
+  
+    <nav class="md-nav" aria-label="b. The ls command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flags-to-the-ls-command" class="md-nav__link">
+    Flags to the ls command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-the-cd-command" class="md-nav__link">
+    c. The cd command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-the-tree-command" class="md-nav__link">
+    d. The tree command
+  </a>
+  
+    <nav class="md-nav" aria-label="d. The tree command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flags-to-the-tree-command" class="md-nav__link">
+    Flags to the tree command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-the-cat-command" class="md-nav__link">
+    e. The cat command
+  </a>
+  
+    <nav class="md-nav" aria-label="e. The cat command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flags-to-the-cat-command" class="md-nav__link">
+    Flags to the cat command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-making-changes-to-the-file-system" class="md-nav__link">
+    3. Making Changes to the File System
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Making Changes to the File System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-the-mkdir-command" class="md-nav__link">
+    a. The mkdir command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-the-rmdir-command" class="md-nav__link">
+    b. The rmdir command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-the-touch-command" class="md-nav__link">
+    c. The touch command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-the-rm-command" class="md-nav__link">
+    d. The rm command
+  </a>
+  
+    <nav class="md-nav" aria-label="d. The rm command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flags-to-the-rm-command" class="md-nav__link">
+    Flags to the rm command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-the-mv-command" class="md-nav__link">
+    e. The mv command
+  </a>
+  
+    <nav class="md-nav" aria-label="e. The mv command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moving-files-and-directories" class="md-nav__link">
+    Moving files and directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renaming-files-and-directories" class="md-nav__link">
+    Renaming files and directories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cp-command" class="md-nav__link">
+    The cp command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    ****
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../markdown/" title="Learn MarkDown for easier Web-Development" class="md-nav__link">
+      Learn MarkDown for easier Web-Development
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      The Java Jedi
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="The Java Jedi" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        The Java Jedi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../java/math/" title="The Math Class" class="md-nav__link">
+      The Math Class
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Modern JS
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Modern JS" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Modern JS
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../js/overview/" title="Series OverView" class="md-nav__link">
+      Series OverView
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../js/keywords/" title="var, let, const keywords" class="md-nav__link">
+      var, let, const keywords
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../js/fnctns/" title="Functions Unlimited - JS" class="md-nav__link">
+      Functions Unlimited - JS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../js/arrow/" title="Arrow functions" class="md-nav__link">
+      Arrow functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../js/spread/" title="Rest and Spread Operators" class="md-nav__link">
+      Rest and Spread Operators
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../js/templates/" title="Template Literals" class="md-nav__link">
+      Template Literals
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../js/obj/" title="Object Literal Enhancements" class="md-nav__link">
+      Object Literal Enhancements
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../js/destructure/" title="Array and Object DeStructuring" class="md-nav__link">
+      Array and Object DeStructuring
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../js/oops/" title="OOPS Concepts" class="md-nav__link">
+      OOPS Concepts
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../js/modules/" title="Modules in JS" class="md-nav__link">
+      Modules in JS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../js/async/" title="Aysnchronous JS" class="md-nav__link">
+      Aysnchronous JS
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../js/extras/" title="Extras" class="md-nav__link">
+      Extras
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-prerequisites" class="md-nav__link">
+    1. PreRequisites
+  </a>
+  
+    <nav class="md-nav" aria-label="1. PreRequisites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-what-is-bash" class="md-nav__link">
+    a. What is BASh
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-current-and-parent-directories" class="md-nav__link">
+    b. Current and Parent Directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-dotfiles-and-hidden-files" class="md-nav__link">
+    c. Dotfiles and Hidden files
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-root-and-home-directories" class="md-nav__link">
+    d. Root and Home directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-absolute-and-relative-paths" class="md-nav__link">
+    e. Absolute and Relative Paths
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#f-package-managers" class="md-nav__link">
+    f. Package Managers
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#g-clear-help-and-close-commands" class="md-nav__link">
+    g. Clear, Help and Close commands
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-navigating-the-file-system" class="md-nav__link">
+    2. Navigating the File System
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Navigating the File System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-the-pwd-command" class="md-nav__link">
+    a. The pwd command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-the-ls-command" class="md-nav__link">
+    b. The ls command
+  </a>
+  
+    <nav class="md-nav" aria-label="b. The ls command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flags-to-the-ls-command" class="md-nav__link">
+    Flags to the ls command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-the-cd-command" class="md-nav__link">
+    c. The cd command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-the-tree-command" class="md-nav__link">
+    d. The tree command
+  </a>
+  
+    <nav class="md-nav" aria-label="d. The tree command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flags-to-the-tree-command" class="md-nav__link">
+    Flags to the tree command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-the-cat-command" class="md-nav__link">
+    e. The cat command
+  </a>
+  
+    <nav class="md-nav" aria-label="e. The cat command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flags-to-the-cat-command" class="md-nav__link">
+    Flags to the cat command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-making-changes-to-the-file-system" class="md-nav__link">
+    3. Making Changes to the File System
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Making Changes to the File System">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-the-mkdir-command" class="md-nav__link">
+    a. The mkdir command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#b-the-rmdir-command" class="md-nav__link">
+    b. The rmdir command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#c-the-touch-command" class="md-nav__link">
+    c. The touch command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#d-the-rm-command" class="md-nav__link">
+    d. The rm command
+  </a>
+  
+    <nav class="md-nav" aria-label="d. The rm command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#flags-to-the-rm-command" class="md-nav__link">
+    Flags to the rm command
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#e-the-mv-command" class="md-nav__link">
+    e. The mv command
+  </a>
+  
+    <nav class="md-nav" aria-label="e. The mv command">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#moving-files-and-directories" class="md-nav__link">
+    Moving files and directories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#renaming-files-and-directories" class="md-nav__link">
+    Renaming files and directories
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-cp-command" class="md-nav__link">
+    The cp command
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    ****
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/theskinnycoder/theskinnycoder.github.io.git/edit/master/docs/devess/bash1.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="bash"><strong>BASH</strong><a class="headerlink" href="#bash" title="Permanent link">&para;</a></h1>
+<h2 id="1-prerequisites"><strong>1. PreRequisites</strong><a class="headerlink" href="#1-prerequisites" title="Permanent link">&para;</a></h2>
+<h3 id="a-what-is-bash"><strong>a. What is BASh</strong><a class="headerlink" href="#a-what-is-bash" title="Permanent link">&para;</a></h3>
+<ul>
+<li><em>BASh*</em> means <b>B</b>ourne <b>A</b>gain <b>Sh</b>ell. It is a langauge used in the CLIs of <em>*nix</em> environments.</li>
+</ul>
+<p><img alt="alt text" src="http://imgur.com/sdnJB3Q.gif" title="&quot;BashGIF&quot;" /></p>
+<ul>
+<li>In Windows OSes, <em>Batch</em>(Command Prompt) and <em>PowerShell</em> langauges are used in their CLIs. Bash can also be used by installing <em>GitBash</em> or <em>WSL</em> on Windows. For this tutorial we'll stick to <strong>GitBash</strong>.</li>
+</ul>
+<h3 id="b-current-and-parent-directories"><strong>b. Current and Parent Directories</strong><a class="headerlink" href="#b-current-and-parent-directories" title="Permanent link">&para;</a></h3>
+<ul>
+<li>In Bash(*nix), folders are called as <strong>directories</strong>.</li>
+<li><strong><code>.</code></strong> means current working directory(cwd). Similarly, <strong><code>..</code></strong> means, the parent directory of the cwd.</li>
+</ul>
+<h3 id="c-dotfiles-and-hidden-files"><strong>c. Dotfiles and Hidden files</strong><a class="headerlink" href="#c-dotfiles-and-hidden-files" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Files and Directories which are prepended with a '<strong>.</strong>' are <em>hidden</em>.</p>
+</li>
+<li>
+<p>In general, configuration files are dotfiles, and doesn't have extensions/file-formats.</p>
+</li>
+</ul>
+<h3 id="d-root-and-home-directories"><strong>d. Root and Home directories</strong><a class="headerlink" href="#d-root-and-home-directories" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>In any OS, there will be a <strong>ROOT</strong> directory :</p>
+<ul>
+<li>
+<p>In *nix, it is <strong><code>/</code></strong>.</p>
+</li>
+<li>
+<p>In Windows(GitBash), it is <strong><code>/C:/</code></strong>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>It is denoted by <strong><code>/</code></strong>.</p>
+</li>
+<li>
+<p>In any OS, there will be a <strong>HOME</strong> directory :</p>
+<ul>
+<li>
+<p>In Linux, it is <strong><code>/home/&lt;user_name&gt;</code></strong>.</p>
+</li>
+<li>
+<p>In Mac, it is <strong><code>/Users/&lt;user_name&gt;</code></strong>.</p>
+</li>
+<li>
+<p>In Windows(GitBash), it is <strong><code>/C:/Users/&lt;user_name&gt;</code></strong>.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>It is denoted by <strong><code>~</code></strong>. When a terminal session starts, by defualt it'll start in <strong><code>~</code></strong>.</p>
+</li>
+</ul>
+<h3 id="e-absolute-and-relative-paths"><strong>e. Absolute and Relative Paths</strong><a class="headerlink" href="#e-absolute-and-relative-paths" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>An absolute path will start from the root directory for all its children directories.</p>
+</li>
+<li>
+<p>A relative path will be relative to the cwd and we'll use <strong><code>.</code></strong> and <strong><code>..</code></strong> for denoting the relative paths.</p>
+</li>
+</ul>
+<h3 id="f-package-managers"><strong>f. Package Managers</strong><a class="headerlink" href="#f-package-managers" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>All the softwares and tools can be downloaded and installed into the system as <strong>packages</strong>.</p>
+</li>
+<li>
+<p>To install packages, there are some default package managers that we can use :</p>
+<p>a. Linux : dpkg, apt, pacman, snap etc.</p>
+<p>b. Mac : <a href="https://brew.sh/">brew</a></p>
+<p>c. Windows : <a href="https://chocolatey.org/docs/installation#install-using-nuget-package-manager">chocolatey</a></p>
+</li>
+</ul>
+<h3 id="g-clear-help-and-close-commands"><strong>g. Clear, Help and Close commands</strong><a class="headerlink" href="#g-clear-help-and-close-commands" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>Use <code>clear</code> or press <strong>Ctrl+L</strong> to clear the console.</p>
+</li>
+<li>
+<p>Use <code>exit</code> or press <strong>Ctrl+D</strong> to exit the terminal.</p>
+</li>
+<li>
+<p>To get help :</p>
+</li>
+</ul>
+<p>a. In Windows, use <code>help &lt;command&gt;</code>.</p>
+<p>b. In *nix, use <code>man &lt;command&gt;</code>.</p>
+<h2 id="2-navigating-the-file-system"><strong>2. Navigating the File System</strong><a class="headerlink" href="#2-navigating-the-file-system" title="Permanent link">&para;</a></h2>
+<h3 id="a-the-pwd-command"><strong>a. The <code>pwd</code> command</strong><a class="headerlink" href="#a-the-pwd-command" title="Permanent link">&para;</a></h3>
+<ul>
+<li>This command <b>p</b>rints the <b>w</b>orking <b>d</b>irectory, i.e., the absolute path of cwd, i.e. ,<strong><code>.</code></strong></li>
+</ul>
+<h3 id="b-the-ls-command"><strong>b. The <code>ls</code> command</strong><a class="headerlink" href="#b-the-ls-command" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>This command <em>lists</em> the children files and directories of a directory.</p>
+<ul>
+<li>
+<p><code>ls</code> : Enlists the children files and directories of cwd, i.e., <strong><code>.</code></strong></p>
+</li>
+<li>
+<p><code>ls &lt;rel_path_to_dest_dir&gt;</code> : Enlists the children files and directories of the destination directory.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="flags-to-the-ls-command"><strong>Flags to the <code>ls</code> command</strong><a class="headerlink" href="#flags-to-the-ls-command" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>-a</code> : Enlists the hidden files too.</p>
+</li>
+<li>
+<p><code>-l</code> : Includes details like r/w info, date of modification etc.</p>
+</li>
+<li>
+<p><code>-F</code> : Appends a <strong>/</strong> for diirectories, <b>*</b> after executables, and <b>@</b> after SymLinks.</p>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>flags can be combined too! For example, **<code>-la</code>**</strong>. </p>
+</div>
+<h3 id="c-the-cd-command"><strong>c. The <code>cd</code> command</strong><a class="headerlink" href="#c-the-cd-command" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>This command <b>C</b>hanges the <b>D</b>irectory.</p>
+<ul>
+<li>
+<p><code>/</code> (or) <code>cd /</code> : Directly goes to <code>/</code>.</p>
+</li>
+<li>
+<p><code>cd</code> (or) <code>cd ~</code> : Directly goes to <code>~</code>.</p>
+</li>
+<li>
+<p><code>cd &lt;rel_path_to_dest_dir&gt;</code> : Navigates to the destination directory.</p>
+</li>
+<li>
+<p><code>cd -</code> : Directly goes to the previous directory.</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>Press 'tab' to auto-complete the file/directory names, and commands!</strong></p>
+</div>
+<h3 id="d-the-tree-command"><strong>d. The <code>tree</code> command</strong><a class="headerlink" href="#d-the-tree-command" title="Permanent link">&para;</a></h3>
+<ul>
+<li>This command enlists the children files and directories in the form of a <strong>tree</strong>.</li>
+<li>By defualt, it isn't installed on many OSes.</li>
+</ul>
+<h4 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h4>
+<div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Linux</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>$ sudo apt-get install tree // Debian
+
+$ sudo yum install tree // CentOS
+
+$ sudo zypper in tree // OpenSUSE
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Mac</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>// May need sudo
+$ brew install tree
+</code></pre></div>
+
+</div>
+<input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Windows</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>// Run this on an elevated shell, i.e., as administrator
+$ choco install tree
+</code></pre></div>
+
+</div>
+</div>
+<h4 id="flags-to-the-tree-command"><strong>Flags to the <code>tree</code> command</strong><a class="headerlink" href="#flags-to-the-tree-command" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>-a</code> : Enlists the hidden files too.</p>
+</li>
+<li>
+<p><code>-L</code> : Depth can be specified after this flag and only till that depth the children are printed.</p>
+</li>
+<li>
+<p><code>-F</code> : Appends a <strong>/</strong> for diirectories.</p>
+</li>
+<li>
+<p><code>-d</code> : List directories only.</p>
+</li>
+</ul>
+<h3 id="e-the-cat-command"><strong>e. The <code>cat</code> command</strong><a class="headerlink" href="#e-the-cat-command" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>This command con<b>cat</b>enates the content of a file in the console.</p>
+</li>
+<li>
+<p><code>cat &lt;file_name&gt;</code> : Displays the content of the given file name into the terminal.</p>
+</li>
+</ul>
+<h4 id="flags-to-the-cat-command"><strong>Flags to the <code>cat</code> command</strong><a class="headerlink" href="#flags-to-the-cat-command" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>-b</code> : Assigns line numbers to non-empty o/p lines.</p>
+</li>
+<li>
+<p><code>-s</code> : Suppresses repeated empty output lines.</p>
+</li>
+</ul>
+<h2 id="3-making-changes-to-the-file-system"><strong>3. Making Changes to the File System</strong><a class="headerlink" href="#3-making-changes-to-the-file-system" title="Permanent link">&para;</a></h2>
+<h3 id="a-the-mkdir-command"><strong>a. The <code>mkdir</code> command</strong><a class="headerlink" href="#a-the-mkdir-command" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>This command is used to <b>m</b>a<b>k</b>e an <em>empty</em> <b>dir</b>ectory.</p>
+<ul>
+<li><strong><code>mkdir &lt;new_dir_name&gt;</code></strong> : Creates an empty directory with the given name.</li>
+</ul>
+</li>
+</ul>
+<h3 id="b-the-rmdir-command"><strong>b. The <code>rmdir</code> command</strong><a class="headerlink" href="#b-the-rmdir-command" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>This command is used to <b>r</b>e<b>m</b>ove an <em>empty</em>
+  <b>dir</b>ectory.</p>
+<ul>
+<li><strong><code>rmdir &lt;new_dir_name&gt;</code></strong> : Removes an empty directory with the given name.</li>
+</ul>
+</li>
+</ul>
+<h3 id="c-the-touch-command"><strong>c. The <code>touch</code> command</strong><a class="headerlink" href="#c-the-touch-command" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p>This command is used to <em>create</em> an empty file.</p>
+<ul>
+<li><strong><code>touch &lt;new_file_name&gt;</code></strong> : Creates an empty file with the given name.</li>
+</ul>
+</li>
+</ul>
+<h3 id="d-the-rm-command"><strong>d. The <code>rm</code> command</strong><a class="headerlink" href="#d-the-rm-command" title="Permanent link">&para;</a></h3>
+<ul>
+<li>This command is used to <b>r</b>e<b>m</b>ove a file.</li>
+</ul>
+<h4 id="flags-to-the-rm-command"><strong>Flags to the <code>rm</code> command</strong><a class="headerlink" href="#flags-to-the-rm-command" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>-f</code> : Force deletes empty/non-empty/existing/non-existing files without <em>prompting</em> the user.</p>
+</li>
+<li>
+<p><code>-r</code> (or) <code>-R</code> : Can be used to recursively delete the directory and its children too.</p>
+</li>
+<li>
+<p><code>-d</code> : Removes empty directories.</p>
+</li>
+</ul>
+<h3 id="e-the-mv-command"><strong>e. The <code>mv</code> command</strong><a class="headerlink" href="#e-the-mv-command" title="Permanent link">&para;</a></h3>
+<h4 id="moving-files-and-directories"><strong>Moving files and directories</strong><a class="headerlink" href="#moving-files-and-directories" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><code>mv &lt;path_to_src_file&gt; &lt;path_to_dest_dir&gt;</code> : Moves a file existing at a path to the destination directory.</p>
+</li>
+<li>
+<p><code>mv -r &lt;path_to_src_dir&gt; &lt;path_to_dest_dir&gt;</code> : Moves a directory from its path to the destination directory, with all of its children.</p>
+</li>
+</ul>
+<h4 id="renaming-files-and-directories"><strong>Renaming files and directories</strong><a class="headerlink" href="#renaming-files-and-directories" title="Permanent link">&para;</a></h4>
+<ul>
+<li><code>mv &lt;path_with_old_name&gt; &lt;path_with_new_name&gt;</code> : Renames a file/directory with the new name.</li>
+</ul>
+<h3 id="the-cp-command"><strong>The <code>cp</code> command</strong><a class="headerlink" href="#the-cp-command" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
+<p><code>cp &lt;path_to_src_file&gt; &lt;path_to_dest_file_with_name&gt;</code> : Copies a file existing at a path to the the destination path, giving it the name that is passed.</p>
+</li>
+<li>
+<p><code>cp -r &lt;path_to_src_dir&gt; &lt;path_to_dest_dir_with_name&gt;</code> : Copies a directory from its path to the destination directory, giving it the name that is passed, with all of its children.</p>
+</li>
+</ul>
+<h3 id="_1">****<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../devenv/vscode-basics/" title="Setup VSCode - The Basics" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Setup VSCode - The Basics
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../markdown/" title="Learn MarkDown for easier Web-Development" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Learn MarkDown for easier Web-Development
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/theskinnycoder" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://www.facebook.com/rahul.kocherlakota" target="_blank" rel="noopener" title="www.facebook.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://www.youtube.com/channel/UCS-FbZkVQf6WHrZE74d4wOA/featured" target="_blank" rel="noopener" title="www.youtube.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.36cbf620.min.js"></script>
+      <script src="../../assets/javascripts/bundle.00c583dd.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["tabs"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+    
+  </body>
+</html>
